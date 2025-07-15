@@ -1,27 +1,86 @@
-#container {
-  text-align: center;
+// home.page.scss
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-content {
+  --background: linear-gradient(135deg, #0cb4c0 0%, #ffffff 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.login-container {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  padding: 20px 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.8s ease-in-out;
 
-  color: #8c8c8c;
+  ion-card-header {
+    text-align: center;
 
-  margin: 0;
+    ion-card-title {
+      font-size: 26px;
+      font-weight: bold;
+      color: #ffffff;
+    }
+
+    ion-card-subtitle {
+      font-size: 14px;
+      color: #dddddd;
+    }
+  }
+
+  ion-item {
+    --background: transparent;
+    --highlight-color-focused: #ffffff;
+    --color: #ffffff;
+
+    ion-label {
+      color: #ffffff;
+    }
+
+    ion-icon {
+      color: #ffffff;
+    }
+
+    ion-input {
+      color: #ffffff;
+    }
+  }
+
+  ion-button {
+    --border-radius: 12px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  ion-text p {
+    font-size: 14px;
+    color: #fff;
+    margin-top: 10px;
+  }
 }
 
-#container a {
-  text-decoration: none;
+// Simple fade animation
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
